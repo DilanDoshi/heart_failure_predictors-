@@ -13,6 +13,4 @@ Predict whether a patient with heart failure will die during the follow-up perio
 - Binary classification (DEATH vs SURVIVAL)
 - Small tabular dataset (299 rows, 13 columns including target)
 
-# Project  
-Use collab notebook from git, upload changes by 'save to git' function in collab  
-Project Planner: https://docs.google.com/document/d/1RS-hfXCbwajaCCGsBBHBwfMOGir6_LJYSW4GNwPML2A/edit?usp=sharing
+This project is in progress
