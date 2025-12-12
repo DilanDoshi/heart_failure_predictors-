@@ -13,4 +13,108 @@ Predict whether a patient with heart failure will die during the follow-up perio
 - Binary classification (DEATH vs SURVIVAL)
 - Small tabular dataset (299 rows, 13 columns including target)
 
+## Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- pip (Python package installer)
+
+### Setup Instructions
+
+1. **Clone the repository** (if applicable) or navigate to the project directory:
+   ```bash
+   cd m148_heart_failure_predictors-
+   ```
+
+2. **Create a virtual environment** (recommended):
+   ```bash
+   python -m venv venv
+   ```
+
+3. **Activate the virtual environment**:
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+
+4. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+     ```
+
+5. **Verify installation**:
+   ```bash
+   python -c "import pandas, numpy, sklearn, xgboost; print('All packages installed successfully!')"
+   ```
+
+## Usage
+
+### Running the Notebooks
+
+The project is organized into sequential notebooks:
+
+1. **`01-EDA.ipynb`** - Exploratory Data Analysis
+   - Data loading and initial exploration
+   - Feature distribution analysis
+   - Outlier detection and removal
+
+2. **`02-data-cleaning-preprocessing.ipynb`** - Data Preparation
+   - Missing value handling
+   - Feature scaling and standardization
+   - Train/validation split
+
+3. **`03-ml-and-predictions.ipynb`** - Model Training & Evaluation
+   - Baseline model establishment
+   - Hyperparameter tuning for multiple models
+   - Model comparison and selection
+
+4. **`05-reporting-evaluation.ipynb`** - Final Evaluation & Interpretation
+   - Feature importance analysis
+   - Final model evaluation
+   - Overfitting analysis
+
+### Starting Jupyter Notebook
+
+After activating your virtual environment:
+
+```bash
+jupyter notebook
+```
+
+Or if using JupyterLab:
+
+```bash
+jupyter lab
+```
+
+Navigate to the `notebooks/` directory and open the notebooks in order.
+
+### Project Structure
+
+```
+m148_heart_failure_predictors-/
+├── data/                          # Dataset files
+│   ├── heart_failure_clinical_records_dataset.csv
+│   └── heart_failure_clinical_records_dataset_cleaned.csv
+├── notebooks/                     # Jupyter notebooks
+│   ├── 01-EDA.ipynb
+│   ├── 02-data-cleaning-preprocessing.ipynb
+│   ├── 03-ml-and-predictions.ipynb
+│   └── 05-reporting-evaluation.ipynb
+├── helper_funcs/                  # Helper functions
+│   └── evals.py                   # Evaluation utilities
+├── requirements.txt               # Python dependencies
+└── README.md                      # This file
+```
+
+## Notes
+
+- The notebooks should be run in sequential order (01 → 02 → 03 → 05)
+- Intermediate data files (train/validation splits) are saved in the `data/` directory
+- The project uses a validation set as the final test set (no separate test set created)
+
 This project is in progress
